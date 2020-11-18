@@ -137,7 +137,7 @@ $medium-breakpoint: 960px;
 
 @media (max-width: $small-breakpoint) {
   .landscape {
-    width: $medium-breakpoint;
+    width: $small-breakpoint;
   }
 
   .about-me {
