@@ -18,3 +18,146 @@ $medium-breakpoint: 960px;
     box-sizing: border-box;
   }
 }
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: $primary-light;
+  width: 100%;
+}
+
+.navbar__title-container {
+  padding: $gutter;
+}
+
+.navbar__title {
+  font-size: 30px;
+}
+
+.navbar__navlink-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__navlink {
+  padding: $gutter;
+  margin: $gutter;
+  border-radius: 10%;
+}
+
+.navbar__navlink--selected {
+  background-color: $primary;
+  color: white;
+}
+
+.landscape {
+  width: $site-width;
+}
+
+.about-me {
+  display: grid;
+  grid-template-columns: $profile-image-width 1fr;
+  width: $medium-breakpoint;
+  margin: $gutter * 4;
+}
+
+.about-me__headshot {
+  grid-column: 1 / 2;
+  width: $profile-image-width;
+  border-radius: 50%;
+  padding-right: $gutter * 3;
+}
+
+.about-me__description {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+} 
+
+.about-me__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: $gutter * 2;
+}
+
+.about-me__paragraph {
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: $primary;
+  color: white;
+}
+
+.footer__navlink-container {
+  display: flex;
+}
+
+.footer__navlink {
+  padding: $gutter;
+}
+
+@media (max-width: $medium-breakpoint) {
+  .landscape {
+    width: $medium-breakpoint;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $medium-breakpoint;
+    margin: $gutter * 4;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .about-me__headshot {
+    width: $profile-image-width;
+    border-radius: 50%;
+    padding-right: $gutter * 3;
+  }
+
+  .about-me__description {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+  } 
+}
+
+@media (max-width: $small-breakpoint) {
+  .landscape {
+    width: $medium-breakpoint;
+  }
+
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $small-breakpoint;
+    margin: $gutter * 4;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .about-me__headshot {
+    width: $profile-image-width;
+    border-radius: 50%;
+    padding-right: $gutter * 3;
+  }
+
+  .about-me__description {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+  } 
+}
