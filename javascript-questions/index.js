@@ -49,17 +49,15 @@ const convertCharactersToArray = (heroes) => {
  * }
  */
 const groupByPublisher = (heroes) => {
-  const heroesByPublisher = {}
-  // heroes.forEach(hero => {
-  //   const publisher = hero.publisher
-  //   if (publisher in heroesByPublisher) {
-  //     heroesByPublisher[publisher].push(hero)
-  //   } else {
-  //     heroesByPublisher[publisher] = [hero]
-  //   }
-  // })
-  const reduced = heroes.reduce()
-  return heroesByPublisher
+  return heroes.reduce((accum, hero) => {
+    const publisher = hero.publisher
+    const heroesSoFar = accum[publisher]
+    if (heroesSoFar) {
+      return { ...accum, [publisher]: [...heroesSoFar, hero] }
+    } else {
+      return { ...accum, [publisher]: [hero] }
+    }
+  }, {})
 }
 
 /**
