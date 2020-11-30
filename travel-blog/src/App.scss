@@ -23,6 +23,7 @@ $medium-breakpoint: 960px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
 }
 
 .navbar {
@@ -51,13 +52,17 @@ $medium-breakpoint: 960px;
   border-radius: 10%;
 }
 
+.navbar__navlink:hover {
+  cursor: pointer;
+}
+
 .navbar__navlink--selected {
   background-color: $primary;
   color: white;
 }
 
 .landscape {
-  width: $site-width;
+  width: 100%;
 }
 
 .about-me {
@@ -108,43 +113,21 @@ $medium-breakpoint: 960px;
   padding: $gutter;
 }
 
-@media (max-width: $medium-breakpoint) {
-  .landscape {
-    width: $medium-breakpoint;
-  }
-
-  .about-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: $medium-breakpoint;
-    margin: $gutter * 4;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .about-me__headshot {
-    width: $profile-image-width;
-    border-radius: 50%;
-    padding-right: $gutter * 3;
-  }
-
-  .about-me__description {
-    display: grid;
-    grid-template-rows: 40px 1fr;
-  } 
+.footer__navlink:hover {
+  cursor: pointer;
 }
 
-@media (max-width: $small-breakpoint) {
+@media (max-width: $medium-breakpoint) {
   .landscape {
-    width: $small-breakpoint;
+    width: 100%;
   }
 
   .about-me {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: $small-breakpoint;
+    max-width: $medium-breakpoint;
+    width: 100%;
     margin: $gutter * 4;
     padding-left: 50px;
     padding-right: 50px;
